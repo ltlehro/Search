@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Google</h1>
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" class="search-bar" placeholder="Search Google" required>
+            <input type="submit" value="Google Search" class="search-button">
+            <input type="button" value="I'm Feeling Lucky" class="lucky-button" onclick="window.location.href='https://www.google.com/search?btnI&q=' + document.querySelector('input[name=q]').value;">
+        </form>
+        <div class="links">
+            <a href="imageSearch.html">Image Search</a>
+            <a href="advancedSearch.html">Advanced Search</a>
+        </div>
+    </div>
+</body>
+</html>

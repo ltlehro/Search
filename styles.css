@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center; /* Center text for main search and image search pages */
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    text-align: left; /* Left-align for advanced search only */
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    display: block; /* Ensure it takes full width */
+    margin: 0 auto; /* Center the input in the main search and image search */
+}
+
+.search-button,
+.lucky-button,
+.advanced-button {
+    height: 40px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Add space between buttons */
+}
+
+.search-button {
+    background-color: #f8f9fa; /* Light gray for Google Search */
+}
+
+.lucky-button {
+    background-color: #f0f0f0; /* Light gray for I'm Feeling Lucky */
+}
+
+.advanced-button {
+    background-color: #4285F4; /* Blue background */
+    color: white; /* White text */
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4285F4;
+}
