@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Google Logo -->
+<div class="logo">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="272" height="92">
+</div>
+
+<!-- Navigation to other pages -->
+<nav>
+    <a href="index.html">Google Search</a> |
+    <a href="image-search.html">Image Search</a> |
+    <a href="advanced-search.html">Advanced Search</a>
+</nav>
+
+<!-- Google Advanced Search Form -->
+<form id="advancedSearchForm" action="https://www.google.com/search" method="get">
+    <label for="allWords">Find pages with all these words:</label>
+    <input type="text" id="allWords" name="q" placeholder="Enter words">
+
+    <label for="exactPhrase">Find pages with this exact word or phrase:</label>
+    <input type="text" id="exactPhrase" placeholder="Enter exact phrase">
+
+    <label for="anyWords">Find pages with any of these words:</label>
+    <input type="text" id="anyWords" placeholder="Enter words separated by space">
+
+    <label for="noneWords">Find pages with none of these words:</label>
+    <input type="text" id="noneWords" placeholder="Enter words to exclude">
+
+    <button type="submit">Search</button>
+</form>
+
+<footer>
+    <p>WEB50</p>
+</footer>
+
+<script>
+    document.getElementById('advancedSearchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let allWords = document.getElementById('allWords').value;
+        let exactPhrase = document.getElementById('exactPhrase').value;
+        let anyWords = document.getElementById('anyWords').value;
+        let noneWords = document.getElementById('noneWords').value;
+
+        let query = '';
+        if (allWords) query += allWords;
+        if (exactPhrase) query += ` "${exactPhrase}"`;
+        if (anyWords) query += ` (${anyWords.split(' ').join(' OR ')})`;
+        if (noneWords) query += ` ${noneWords.split(' ').map(word => `-${word}`).join(' ')}`;
+
+        let searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        window.location.href = searchUrl;
+    });
+</script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Search</title>
+    <title>Google Image Search</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +19,9 @@
 </nav>
 
 <form action="https://www.google.com/search" method="get">
-    <input type="text" name="q" placeholder="Search Google">
-    <button type="submit">Google Search</button>
+    <input type="hidden" name="tbm" value="isch">
+    <input type="text" name="q" placeholder="Search Google Images">
+    <button type="submit">Image Search</button>
 </form>
 
 <footer>
